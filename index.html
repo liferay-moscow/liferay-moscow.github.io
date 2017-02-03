@@ -1,7 +1,7 @@
 <html>
   <head>
     <style>
-      @media screen and (orientation: landscape) { 
+      @media screen and (orientation: portrait) { 
         .rotate-device { 
           position: fixed;
           top: 0;
@@ -9,7 +9,6 @@
           width: 100%;
           height: 100%;
           z-index: 1000000;
-          display: none;
           overflow-x: hidden;
           overflow-y: scroll;
           -webkit-overflow-scrolling: none;
@@ -26,10 +25,16 @@
   </head>
   <body style="text-align: center;" >
     <img src="/img/office.jpg" />
-    <div class="rotate-device"/>
     <audio autoplay="autoplay">
         <source src="/media/mfn.mp3" type="audio/mp3" />
         <source src="/media/mfn.ogg" type="audio/ogg; codecs=vorbis" />
     </audio>
+    <div id="rotateDevice" class="rotate-device"> 
+      <div class="rotate-device-in"> 
+        <div class="rotate-device__block"><img src="/img/rotate-img.png" /></div> 
+        <div class="rotate-device__text"><img src="/img/rotate-text.png" /></div> 
+      </div> 
+    </div>
+    
   </body>
 </html>
